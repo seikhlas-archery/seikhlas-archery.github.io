@@ -1,0 +1,61 @@
+/* style.css - Seikhlas Archery Custom Styles */
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    scroll-behavior: smooth;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1511078573424-4f4f22759e53?q=80&w=1470&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0;
+}
+
+/* Sections Padding */
+section { 
+    padding: 80px 0; 
+}
+
+/* Navigation */
+.navbar-brand { 
+    letter-spacing: 1px; 
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+/* Table Customization */
+.table-responsive {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #212529;
+}
+
+footer a {
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #ffc107 !important;
+    text-decoration: underline !important;
+}
+
+/* Custom Helpers */
+.text-warning-custom {
+    color: #ffc107;
+}
+
+.border-warning-custom {
+    border-color: #ffc107 !important;
+}
