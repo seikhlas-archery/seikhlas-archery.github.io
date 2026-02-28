@@ -24,7 +24,7 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Utama</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">Mengenai Kami</a></li>
                     <li class="nav-item"><a class="nav-link" href="#schedule">Jadual</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#support">Tajaan</a></li>
+                    <li class="nav-item"><a class="nav-link text-warning fw-bold" href="#support">Tajaan</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Hubungi</a></li>
                 </ul>
             </div>
@@ -39,7 +39,7 @@
         </div>
     </header>
 
-    <section id="about">
+    <section id="about" class="py-5 mt-4">
         <div class="container">
             <div class="row align-items-center text-center">
                 <div class="col-md-12">
@@ -55,7 +55,7 @@
         </div>
     </section>
 
-    <section id="schedule" class="bg-light">
+    <section id="schedule" class="bg-light py-5">
         <div class="container text-center">
             <div class="mb-5">
                 <h2 class="fw-bold text-uppercase">Jadual Latihan Mac 2026</h2>
@@ -115,48 +115,64 @@
         </div>
     </section>
 
-    <section id="tournaments" class="bg-light">
+    <section id="tournaments" class="bg-light py-5">
         <div class="container text-center">
-            <h2 class="fw-bold text-uppercase mb-5 text-center">Takwim Pertandingan 2026</h2>
+            <h2 class="fw-bold text-uppercase mb-5 text-center">Takwim & Pencapaian 2026</h2>
             <div class="row g-4 justify-content-center text-start">
+                
                 <div class="col-md-5">
                     <div class="card h-100 shadow-sm border-0 bg-white">
                         <div class="card-body">
-                            <span class="badge bg-secondary mb-2">Selesai</span>
-                            <h5 class="fw-bold">Kejohanan Memanah Terbuka Kulai 2026</h5>
-                            <p class="text-muted small">📅 24 - 25 Jan 2026 | 📍 Kulai</p>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-secondary">Selesai</span>
+                                <span class="badge bg-warning text-dark border border-warning">🥉 Pingat Gangsa</span>
+                            </div>
+                            <h5 class="fw-bold mb-1">Kejohanan Memanah Terbuka Kulai</h5>
+                            <p class="text-muted small mb-3">📅 24 - 25 Jan 2026 | 📍 Kulai</p>
+                            
+                            <div class="p-2 bg-light rounded border-start border-warning border-3">
+                                <small class="fw-bold d-block text-dark">Tahniah Atlet Seikhlas!</small>
+                                <small class="text-muted">Pemenang Pingat Gangsa bagi kategori <strong>Cilik Lelaki (Bawah 9 Tahun)</strong>.</small>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-5">
-                    <div class="card h-100 shadow border-0 border-start border-warning border-5 bg-white">
+                    <div class="card h-100 shadow border-0 border-start border-primary border-5 bg-white">
                         <div class="card-body">
-                            <span class="badge bg-success mb-2">Akan Datang</span>
-                            <h5 class="fw-bold text-primary">Kejohanan Memanah MSSD Kota Tinggi</h5>
+                            <div class="mb-2">
+                                <span class="badge bg-success">Akan Datang</span>
+                            </div>
+                            <h5 class="fw-bold text-primary mb-1">Kejohanan Memanah MSSD Kota Tinggi</h5>
                             <p class="text-muted small">📅 28 - 29 April 2026 | 📍 Kota Tinggi</p>
+                            <div class="mt-3">
+                                <small class="text-danger fw-bold">* Misi utama pasukan elit sekolah.</small>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="py-5">
         <div class="container text-center">
             <h2 class="fw-bold mb-5">HUBUNGI KAMI</h2>
             <div class="row justify-content-center">
                 <div class="col-md-5 mb-3">
-                    <div class="p-4 border rounded bg-white shadow-sm h-100">
-                        <h6 class="fw-bold text-warning text-uppercase">Pengurus Pasukan</h6>
-                        <p class="fw-bold mb-1">Puan Latifah</p>
-                        <a href="https://wa.me/60127495699" class="btn btn-outline-success btn-sm mt-2">
+                    <div class="p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <h6 class="fw-bold text-warning text-uppercase mb-3">Pengurus Pasukan</h6>
+                        <p class="fw-bold mb-1 text-dark">Puan Latifah</p>
+                        <a href="https://wa.me/60127495699" class="btn btn-outline-success btn-sm mt-2 fw-bold">
                             💬 WhatsApp: 012-7495699
                         </a>
                     </div>
                 </div>
                 <div class="col-md-5 mb-3">
-                    <div class="p-4 border rounded bg-white shadow-sm h-100">
-                        <h6 class="fw-bold text-warning text-uppercase">Alamat Sekolah</h6>
+                    <div class="p-4 border rounded bg-white shadow-sm h-100 text-center">
+                        <h6 class="fw-bold text-warning text-uppercase mb-3">Alamat Sekolah</h6>
                         <p class="small text-muted mb-0">SK Felda Lok Heng Selatan,<br>81900 Kota Tinggi, Johor.</p>
                     </div>
                 </div>
@@ -167,7 +183,7 @@
     <footer class="bg-dark text-white pt-5 pb-3">
         <div class="container text-center">
             <p class="fw-bold text-warning mb-2">🏹 SEIKHLAS ARCHERY CLUB</p>
-            <p class="small text-secondary mb-0">SK Felda Lok Heng Selatan (JBA3045)</p>
+            <p class="small text-secondary mb-0">SK Felda Lok Heng Selatan (JBA3052)</p>
             <hr class="border-secondary my-4">
             <p class="small text-secondary mb-0">&copy; 2026 Seikhlas Archery. Semua hak cipta terpelihara.</p>
         </div>
