@@ -62,6 +62,19 @@ footer a:hover {
     color: #ffc107;
 }
 
+/* Kemas kini untuk paparan telefon pintar (Mobile) */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 1.8rem !important; /* Kecilkan saiz tajuk di mobile */
+    }
+    .hero-section p {
+        font-size: 1rem !important; /* Kecilkan saiz kapsyen di mobile */
+    }
+    .hero-section {
+        padding: 80px 0; /* Kurangkan ruang kosong atas/bawah di mobile */
+    }
+}
+
 .border-warning-custom {
     border-color: #ffc107 !important;
 }
