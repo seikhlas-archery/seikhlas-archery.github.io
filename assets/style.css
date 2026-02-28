@@ -9,12 +9,18 @@ body {
 
 /* Hero Section */
 .hero-section {
+    /* 1. Tambah warna latar belakang (backup) untuk teks kekal jelas */
+    background-color: #004d40; /* Warna hijau gelap */
+    
+    /* 2. Gabungan lapisan 'gradient' gelap dan gambar sendiri */
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('https://images.unsplash.com/photo-1511078573424-4f4f22759e53?q=80&w=1470&auto=format&fit=crop');
+                url('../images/hero.jpeg'); /* Pautan ke folder images anda */
+                
     background-size: cover;
     background-position: center;
     color: white;
     padding: 120px 0;
+    min-height: 400px; /* Jaminan ketinggian minimum */
 }
 
 /* Sections Padding */
