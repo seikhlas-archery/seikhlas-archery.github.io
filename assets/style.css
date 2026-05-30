@@ -82,7 +82,7 @@ footer a:hover {
 /* --- Tambahan CSS untuk Imej Latar Belakang Hero --- */
 .hero-section {
     background-size: cover;          /* Gambar meliputi keseluruhan ruang */
-    background-position: center;      /* Gambar sentiasa berpusat */
+    background-position: center 20%;      /* Gambar sentiasa berpusat */
     background-repeat: no-repeat;     /* Tidak berulang */
     height: 90vh;                    /* Ketinggian dramatik (90% ketinggian skrin) */
     position: relative;
