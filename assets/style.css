@@ -78,3 +78,25 @@ footer a:hover {
 .border-warning-custom {
     border-color: #ffc107 !important;
 }
+
+/* --- Tambahan CSS untuk Imej Latar Belakang Hero --- */
+.hero-section {
+    background-size: cover;          /* Gambar meliputi keseluruhan ruang */
+    background-position: center;      /* Gambar sentiasa berpusat */
+    background-repeat: no-repeat;     /* Tidak berulang */
+    height: 90vh;                    /* Ketinggian dramatik (90% ketinggian skrin) */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Memastikan teks sentiasa putih di atas imej */
+.hero-section h1,
+.hero-section p {
+    color: #ffffff !important;
+}
+
+/* Mempertingkatkan kontras teks */
+.hero-section .display-3 {
+    text-shadow: 0px 4px 15px rgba(0,0,0,0.8);
+}
+
