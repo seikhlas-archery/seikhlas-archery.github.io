@@ -13,15 +13,16 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.5px; /* Rapatkan sedikit abjad tajuk supaya nampak padat dan kukuh */
 }
 
-/* 2. HERO SECTION (Telah Dibersihkan & Disatukan) */
+/* 2. HERO SECTION */
 .hero-section {
     background-size: cover;
-    background-position: center 20%; /* Menurunkan titik fokus supaya muka tidak ditutup teks */
+    background-position: center top; /* Fokus bermula dari bahagian atas gambar */
     background-repeat: no-repeat;
-    height: 85vh; /* Ketinggian dramatik */
+    height: 85vh; 
     position: relative;
     overflow: hidden;
 }
+
 
 .hero-section h1 {
     color: #ffffff !important;
