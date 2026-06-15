@@ -5,102 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seikhlas Archery | Kelab Memanah SK Felda Lok Heng Selatan</title>
     
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Kelab memanah rasmi SK Felda Lok Heng Selatan (JBA3052). Melahirkan pemanah berdisiplin dan bintang Olimpik masa hadapan.">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://seikhlas-archery.github.io/">
     <meta property="og:title" content="Seikhlas Archery | Kelab Memanah SK Felda Lok Heng Selatan">
-    <meta property="og:description" content="Kelab memanah rasmi SK Felda Lok Heng Selatan (JBA3052). Melahirkan pemanah berdisiplin dan bintang Olimpik masa hadapan.">
+    <meta property="og:description" content="Kelab memanah rasmi SK Felda Lok Heng Selatan. Melahirkan pemanah berdisiplin, fokus, dan berdaya saing.">
     <meta property="og:image" content="https://seikhlas-archery.github.io/images/logo-kelab.png">
     <meta property="og:image:width" content="500">
     <meta property="og:image:height" content="500">
     
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Seikhlas Archery | Kelab Memanah SK Felda Lok Heng Selatan">
-    <meta name="twitter:description" content="Kelab memanah rasmi SK Felda Lok Heng Selatan (JBA3052).">
+    <meta name="twitter:description" content="Kelab memanah rasmi SK Felda Lok Heng Selatan. Melahirkan pemanah berdisiplin dan bintang Olimpik masa hadapan.">
     <meta name="twitter:image" content="https://seikhlas-archery.github.io/images/logo-kelab.png">
-
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo-kelab.png">
+    
+    <!-- Preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts: Poppins untuk teks, Bebas Neue untuk aksen sporty -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/style.css">
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Structured Data for Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsTeam",
+      "name": "Seikhlas Archery Club",
+      "alternateName": "Kelab Memanah SK Felda Lok Heng Selatan",
+      "url": "https://seikhlas-archery.github.io/",
+      "logo": "https://seikhlas-archery.github.io/images/logo-kelab.png",
+      "memberOf": {
+        "@type": "EducationalOrganization",
+        "name": "SK Felda Lok Heng Selatan"
+      },
+      "sport": "Archery"
+    }
+    </script>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-                <img src="images/logo-kelab.png" alt="Logo Seikhlas Archery" width="40" height="40" class="me-2" style="object-fit: contain;">
+                <img src="images/logo-kelab.png" alt="Logo Seikhlas Archery" width="38" height="38" class="me-2" loading="lazy">
                 SEIKHLAS ARCHERY
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Utama</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">Mengenai Kami</a></li>
-                    <li class="nav-item"><a class="nav-link text-warning fw-bold" href="#support">Tajaan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#support">Tajaan</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Hubungi</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Header / Hero Section -->
-    <header id="home" class="hero-section text-center d-flex align-items-end justify-content-center text-white" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%), url('images/hero-team.webp');">
-        <div class="container pb-5 mb-md-5"> 
-            <h1 class="display-3 fw-bold mb-3 tracking-wide text-uppercase" style="letter-spacing: 2px; text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">SK Felda Lok Heng Selatan</h1>
-            <p class="lead mb-4 mx-auto" style="max-width: 600px; text-shadow: 1px 1px 4px rgba(0,0,0,0.8);">Melahirkan Pemanah Berdisiplin, Fokus, dan Berdaya Saing.</p>
-            <a href="#support" class="btn btn-warning btn-lg px-5 fw-bold shadow-lg">Sokong Kami</a>
+    <!-- ========== HERO SECTION ========== -->
+    <header id="home" class="hero-section d-flex align-items-center">
+        <div class="container position-relative">
+            <div class="hero-content">
+                <h1 class="display-3 fw-bold text-uppercase">SK Felda Lok Heng Selatan</h1>
+                <p class="lead hero-subtitle">Melahirkan Pemanah Berdisiplin, Fokus, dan Berdaya Saing.</p>
+                <a href="#support" class="btn btn-hero btn-lg fw-bold text-uppercase">Sokong Kami</a>
+            </div>
         </div>
     </header>
 
-    <!-- Keputusan Kejohanan Terkini -->
-    <section id="latest-results" class="py-5 bg-light">
+    <!-- ========== KEPUTUSAN TERKINI ========== -->
+    <section id="latest-results" class="bg-light">
         <div class="container text-center">
             <div class="mb-5">
-                <span class="badge bg-danger mb-3 px-3 py-2 text-uppercase tracking-wide shadow-sm" style="letter-spacing: 1px;">Keputusan Rasmi</span>
-                <h2 class="fw-bold text-uppercase">Selangor Juniors Open</h2>
-                <hr class="mx-auto border-warning border-3 opacity-100" style="width: 60px;">
-                <p class="text-muted mx-auto" style="max-width: 600px;">Satu pencapaian membanggakan apabila atlet cilik Seikhlas Archery berjaya mendominasi pentas dan membawa pulang kilauan pingat.</p>
+                <span class="badge bg-gold mb-3 px-3 py-2 text-uppercase tracking-wide">Keputusan Rasmi</span>
+                <h2 class="section-title">Selangor Juniors Open</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">Pencapaian membanggakan atlet cilik Seikhlas Archery mendominasi pentas dan membawa pulang kilauan pingat.</p>
             </div>
 
             <div class="row g-4 justify-content-center">
-                <!-- Keputusan 1: Barebow Perempuan (EMAS) -->
+                <!-- Emas -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 shadow-lg border-0 rounded-4 p-4 text-center border-bottom border-warning border-5" style="background: linear-gradient(to bottom, #ffffff, #fffde7);">
-                        <div class="card-body d-flex flex-column justify-content-center">
-                            <span class="fs-1 d-block mb-2">🥇</span>
-                            <h2 class="display-6 fw-bold text-dark mb-1">Pingat Emas</h2>
-                            <p class="text-warning fw-bold small text-uppercase mb-3">Johan Pusingan Olimpik</p>
-                            <h6 class="fw-bold text-dark">Barebow Bawah 12 (Perempuan)</h6>
-                            <p class="text-muted small mb-0 mt-2">Menamatkan pusingan kelayakan di kedudukan ke-4 dan terus mendominasi carta untuk merangkul kejuaraan!</p>
+                    <div class="card card-result">
+                        <div class="card-body text-center">
+                            <div class="medal-icon">🥇</div>
+                            <h2 class="display-6 fw-bold mb-1">Pingat Emas</h2>
+                            <p class="text-gold fw-bold small text-uppercase mb-3">Johan Pusingan Olimpik</p>
+                            <h6 class="fw-bold">Barebow Bawah 12 (Perempuan)</h6>
+                            <p class="text-muted small mt-2">Kelayakan ke-4, terus mendominasi hingga kejuaraan!</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Keputusan 2: Barebow Lelaki (Suku Akhir) -->
+                <!-- Suku Akhir -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 shadow-sm border-0 bg-white rounded-4 p-4 text-center border-bottom border-primary border-5">
-                        <div class="card-body d-flex flex-column justify-content-center">
-                            <span class="fs-1 d-block mb-2">🏹</span>
-                            <h2 class="display-6 fw-bold text-dark mb-1">Suku Akhir</h2>
+                    <div class="card card-result">
+                        <div class="card-body text-center">
+                            <div class="medal-icon">🏹</div>
+                            <h2 class="display-6 fw-bold mb-1">Suku Akhir</h2>
                             <p class="text-primary fw-bold small text-uppercase mb-3">Top 8 Pusingan Olimpik</p>
-                            <h6 class="fw-bold text-dark">Barebow Bawah 12 (Lelaki)</h6>
-                            <p class="text-muted small mb-0 mt-2">Berada di kedudukan ke-5 pusingan kelayakan dan mempamerkan aksi cemerlang hingga ke peringkat Suku Akhir.</p>
+                            <h6 class="fw-bold">Barebow Bawah 12 (Lelaki)</h6>
+                            <p class="text-muted small mt-2">Kelayakan ke-5, cemerlang ke Suku Akhir.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Keputusan 3: Recurve Lelaki -->
+                <!-- Recurve -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 shadow-sm border-0 bg-white rounded-4 p-4 text-center border-bottom border-secondary border-5">
-                        <div class="card-body d-flex flex-column justify-content-center">
-                            <span class="fs-1 d-block mb-2">🌟</span>
-                            <h2 class="display-6 fw-bold text-dark mb-1">Ke-79</h2>
+                    <div class="card card-result">
+                        <div class="card-body text-center">
+                            <div class="medal-icon">🌟</div>
+                            <h2 class="display-6 fw-bold mb-1">Ke-79</h2>
                             <p class="text-secondary fw-bold small text-uppercase mb-3">Pusingan Kelayakan</p>
-                            <h6 class="fw-bold text-dark">Recurve Bawah 10 (Lelaki)</h6>
-                            <p class="text-muted small mb-0 mt-2">Menamatkan saingan kebangsaan dengan penuh disiplin. Pengalaman kompetitif berharga untuk masa depan.</p>
+                            <h6 class="fw-bold">Recurve Bawah 10 (Lelaki)</h6>
+                            <p class="text-muted small mt-2">Penamat penuh disiplin, pengalaman berharga.</p>
                         </div>
                     </div>
                 </div>
@@ -108,320 +141,218 @@
         </div>
     </section>
 
-    <!-- Mengenai Kami -->
-    <section id="about" class="py-5 mt-4">
-        <div class="container">
-            <div class="row align-items-center text-center">
-                <div class="col-md-12">
-                    <h2 class="fw-bold mb-4 border-bottom d-inline-block pb-2">Mengenai Seikhlas Archery</h2>
-                    <p class="lead text-muted mx-auto" style="max-width: 850px;">
-                        Kelab memanah rasmi SK Felda Lok Heng Selatan didedikasikan untuk mencungkil bakat memanah 
-                        di kalangan murid-murid bermula dari peringkat akar umbi. Kami memfokuskan kepada teknik yang betul, 
-                        pembentukan sahsiah diri yang tinggi, serta memegang impian murni untuk 
-                        <strong>melahirkan bintang Olimpik masa hadapan</strong> dari bumi Lok Heng.
-                    </p>
-                </div>
-            </div>
+    <!-- ========== MENGENAI KAMI ========== -->
+    <section id="about">
+        <div class="container text-center">
+            <h2 class="section-title">Mengenai Seikhlas Archery</h2>
+            <p class="lead text-muted mx-auto" style="max-width: 850px;">
+                Kelab memanah rasmi SK Felda Lok Heng Selatan didedikasikan untuk mencungkil bakat memanah di kalangan murid-murid bermula dari peringkat akar umbi. Kami memfokuskan kepada teknik yang betul, pembentukan sahsiah diri yang tinggi, serta memegang impian murni untuk <strong>melahirkan bintang Olimpik masa hadapan</strong> dari bumi Lok Heng.
+            </p>
         </div>
     </section>
 
-    <!-- Galeri (9 Gambar) -->
-    <section id="gallery" class="py-5 bg-dark">
+    <!-- ========== GALERI ========== -->
+    <section id="gallery" class="bg-dark">
         <div class="container text-center">
-            <div class="mb-5">
-                <h2 class="fw-bold text-uppercase text-white">Galeri Lensa Seikhlas</h2>
-                <hr class="mx-auto border-warning border-3 opacity-100" style="width: 60px;">
-                <p class="text-secondary">Fokus, disiplin, dan dedikasi di garisan memanah.</p>
-            </div>
+            <h2 class="section-title text-white">Galeri Lensa Seikhlas</h2>
+            <p class="text-secondary mb-5">Fokus, disiplin, dan dedikasi di garisan memanah.</p>
             
             <div class="row g-4">
-                <!-- BARIS 1: Pencapaian Terkini -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm bg-black">
-                        <img src="images/gambar-bersama-olympian.webp" alt="Bergambar bersama Olympian" class="img-fluid galeri-img" style="height: 250px; object-fit: cover; transition: transform 0.3s ease;">
-                    </div>
+                <div class="col-6 col-md-4">
+                    <img src="images/gambar-bersama-olympian.webp" alt="Bergambar bersama Olympian" class="img-fluid galeri-img" loading="lazy">
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm bg-black">
-                        <img src="images/gambar-barebow-girl.webp" alt="Podium Emas Barebow Perempuan B12" class="img-fluid galeri-img" style="height: 250px; object-fit: cover; transition: transform 0.3s ease;">
-                    </div>
+                <div class="col-6 col-md-4">
+                    <img src="images/gambar-barebow-girl.webp" alt="Podium Emas Barebow Perempuan B12" class="img-fluid galeri-img" loading="lazy">
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm bg-black">
-                        <img src="images/gambar-barebow-boy.webp" alt="Suku Akhir Barebow Lelaki B12" class="img-fluid galeri-img" style="height: 250px; object-fit: cover; transition: transform 0.3s ease;">
-                    </div>
+                <div class="col-6 col-md-4">
+                    <img src="images/gambar-barebow-boy.webp" alt="Suku Akhir Barebow Lelaki B12" class="img-fluid galeri-img" loading="lazy">
                 </div>
-
-                <!-- BARIS 2: Aksi & Pasukan (Gambar Lama) -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm bg-black">
-                        <img src="images/gambar-aksi-mssd.jpg" alt="Aksi Kejohanan MSSD" class="img-fluid galeri-img" style="height: 250px; object-fit: cover; transition: transform 0.3s ease;">
-                    </div>
+                <div class="col-6 col-md-4">
+                    <img src="images/gambar-aksi-mssd.jpg" alt="Aksi Kejohanan MSSD" class="img-fluid galeri-img" loading="lazy">
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm bg-black">
-                        <img src="images/gambar-pasukan.jpg" alt="Pasukan Seikhlas Archery" class="img-fluid galeri-img" style="height: 250px; object-fit: cover; transition: transform 0.3s ease;">
-                    </div>
+                <div class="col-6 col-md-4">
+                    <img src="images/gambar-pasukan.jpg" alt="Pasukan Seikhlas Archery" class="img-fluid galeri-img" loading="lazy">
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm bg-black">
-                        <img src="images/gambar-latihan.JPG" alt="Sesi Latihan Kelab" class="img-fluid galeri-img" style="height: 250px; object-fit: cover; transition: transform 0.3s ease;">
-                    </div>
+                <div class="col-6 col-md-4">
+                    <img src="images/gambar-latihan.jpg" alt="Sesi Latihan Kelab" class="img-fluid galeri-img" loading="lazy">
                 </div>
-
-                <!-- BARIS 3: Fasiliti & Peralatan (Gambar Lama) -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm bg-black">
-                        <img src="images/gambar-fokus-memanah.jpg" alt="Fokus di Garisan Memanah" class="img-fluid galeri-img" style="height: 250px; object-fit: cover; transition: transform 0.3s ease;">
-                    </div>
+                <div class="col-6 col-md-4">
+                    <img src="images/gambar-fokus-memanah.jpg" alt="Fokus di Garisan Memanah" class="img-fluid galeri-img" loading="lazy">
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm bg-black">
-                        <img src="images/gambar-peralatan.jpg" alt="Peralatan Memanah Seikhlas" class="img-fluid galeri-img" style="height: 250px; object-fit: cover; transition: transform 0.3s ease;">
-                    </div>
+                <div class="col-6 col-md-4">
+                    <img src="images/gambar-peralatan.jpg" alt="Peralatan Memanah Seikhlas" class="img-fluid galeri-img" loading="lazy">
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 rounded-4 overflow-hidden shadow-sm bg-black">
-                        <img src="images/gambar-lapang-sasar.jpg" alt="Fasiliti Lapang Sasar" class="img-fluid galeri-img" style="height: 250px; object-fit: cover; transition: transform 0.3s ease;">
-                    </div>
+                <div class="col-6 col-md-4">
+                    <img src="images/gambar-lapang-sasar.jpg" alt="Fasiliti Lapang Sasar" class="img-fluid galeri-img" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Kepimpinan & 1M1S -->
-    <section id="leadership" class="py-5 bg-light">
+    <!-- ========== KEPIMPINAN & 1M1S ========== -->
+    <section id="leadership" class="bg-light">
         <div class="container text-center">
-            <!-- BAHAGIAN 1: ORGANISASI UTAMA -->
-            <div class="mb-5">
-                <h2 class="fw-bold text-uppercase">Organisasi & Kejurulatihan</h2>
-                <hr class="mx-auto border-warning border-3 opacity-100" style="width: 60px;">
-                <p class="text-muted">Tulang belakang pengurusan dan pembangunan bakat Seikhlas Archery.</p>
-            </div>
+            <h2 class="section-title">Organisasi & Kejurulatihan</h2>
+            <p class="text-muted mb-5">Tulang belakang pengurusan dan pembangunan bakat Seikhlas Archery.</p>
             
             <div class="row justify-content-center g-4 mb-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 shadow-sm border-0 bg-white rounded-4 p-4 text-center border-bottom border-dark border-4">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="images/gambar-ramli.jpg" alt="En. Ramli Bin Osman" class="img-fluid rounded-circle shadow-sm mb-3 border border-2 border-light" style="width: 110px; height: 110px; object-fit: cover;">
-                            <h5 class="fw-bold text-dark mb-1">En. Ramli Bin Osman</h5>
-                            <p class="text-warning fw-bold small text-uppercase mb-2">Pengerusi</p>
-                            <span class="badge bg-secondary">Guru Besar SK Felda Lok Heng Selatan</span>
-                        </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-profile">
+                        <img src="images/gambar-ramli.jpg" alt="En. Ramli Bin Osman" class="profile-img" loading="lazy">
+                        <h5 class="fw-bold mt-3">En. Ramli Bin Osman</h5>
+                        <p class="text-gold fw-bold small text-uppercase">Pengerusi</p>
+                        <span class="badge bg-secondary">Guru Besar SK Felda Lok Heng Selatan</span>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 shadow-sm border-0 bg-white rounded-4 p-4 text-center border-bottom border-secondary border-4">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="images/gambar-yusni.jpg" alt="En. Mohd Yusni Bin Moh" class="img-fluid rounded-circle shadow-sm mb-3 border border-2 border-light" style="width: 110px; height: 110px; object-fit: cover;">
-                            <h5 class="fw-bold text-dark mb-1">En. Mohd Yusni Bin Moh</h5>
-                            <p class="text-warning fw-bold small text-uppercase mb-2">Timbalan Pengerusi</p>
-                            <span class="badge bg-secondary">GPK Ko-Kurikulum</span>
-                        </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-profile">
+                        <img src="images/gambar-yusni.jpg" alt="En. Mohd Yusni Bin Moh" class="profile-img" loading="lazy">
+                        <h5 class="fw-bold mt-3">En. Mohd Yusni Bin Moh</h5>
+                        <p class="text-gold fw-bold small text-uppercase">Timbalan Pengerusi</p>
+                        <span class="badge bg-secondary">GPK Ko-Kurikulum</span>
                     </div>
                 </div>
             </div>
 
             <div class="row justify-content-center g-4 mb-4">
-                <div class="col-lg-5 col-md-6">
-                    <div class="card h-100 shadow border-0 bg-white rounded-4 p-4 text-center border-start border-warning border-5">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="images/gambar-latifah.jpg" alt="Pn. Latifah Rabaniah Binti Selamat" class="img-fluid rounded-circle shadow mb-3 border border-2 border-warning" style="width: 120px; height: 120px; object-fit: cover;">
-                            <h5 class="fw-bold text-dark mb-1">Pn. Latifah Rabaniah Binti Selamat</h5>
-                            <p class="text-warning fw-bold small text-uppercase mb-2">Pengurus Kelab</p>
-                            <p class="text-muted small mb-0">Guru Bahasa Inggeris & Setiausaha HEM. Menguruskan tadbir urus dan kelancaran operasi pasukan sejak 2022.</p>
-                        </div>
+                <div class="col-md-6 col-lg-5">
+                    <div class="card card-profile-highlight">
+                        <img src="images/gambar-latifah.jpg" alt="Pn. Latifah Rabaniah" class="profile-img-lg" loading="lazy">
+                        <h5 class="fw-bold">Pn. Latifah Rabaniah Binti Selamat</h5>
+                        <p class="text-gold fw-bold small text-uppercase">Pengurus Kelab</p>
+                        <p class="text-muted small">Guru Bahasa Inggeris & Setiausaha HEM. Menguruskan tadbir urus dan kelancaran operasi pasukan sejak 2022.</p>
                     </div>
                 </div>
-
-                <div class="col-lg-5 col-md-6">
-                    <div class="card h-100 shadow border-0 bg-white rounded-4 p-4 text-center border-start border-warning border-5">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="images/gambar-harman.jpg" alt="En. Harman Bin Saluhi" class="img-fluid rounded-circle shadow mb-3 border border-2 border-warning" style="width: 120px; height: 120px; object-fit: cover;">
-                            <h5 class="fw-bold text-dark mb-1">En. Harman Bin Saluhi</h5>
-                            <p class="text-warning fw-bold small text-uppercase mb-2">Ketua Jurulatih</p>
-                            <p class="text-muted small mb-0">Guru Matematik & Pemegang <strong>Sijil Kejurulatihan Asas NAAM</strong>. Menerajui pembangunan prestasi atlet memanah sejak 2022.</p>
-                        </div>
+                <div class="col-md-6 col-lg-5">
+                    <div class="card card-profile-highlight">
+                        <img src="images/gambar-harman.jpg" alt="En. Harman Bin Saluhi" class="profile-img-lg" loading="lazy">
+                        <h5 class="fw-bold">En. Harman Bin Saluhi</h5>
+                        <p class="text-gold fw-bold small text-uppercase">Ketua Jurulatih</p>
+                        <p class="text-muted small">Guru Matematik & Pemegang <strong>Sijil Kejurulatihan Asas NAAM</strong>. Menerajui pembangunan prestasi atlet memanah sejak 2022.</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Jawatankuasa kecil -->
             <div class="row justify-content-center g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card shadow-sm border-0 bg-white rounded-4 p-3 text-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <img src="images/gambar-aishah.jpg" alt="Cik Aishah Amani Binti Rameli" class="img-fluid rounded-circle shadow-sm me-3 border border-2 border-light" style="width: 60px; height: 60px; object-fit: cover;">
-                            <div class="text-start">
-                                <h6 class="fw-bold text-dark mb-0">Cik Aishah Amani</h6>
-                                <p class="text-muted small mb-0">Ahli Jawatankuasa</p>
-                            </div>
-                        </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card card-profile-small">
+                        <img src="images/gambar-aishah.jpg" alt="Cik Aishah Amani" class="profile-img-sm" loading="lazy">
+                        <h6 class="fw-bold mt-2">Cik Aishah Amani</h6>
+                        <p class="text-muted small">AJK</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card shadow-sm border-0 bg-white rounded-4 p-3 text-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <img src="images/gambar-anis.jpg" alt="Cik Anis Alia Binti Shamsudin" class="img-fluid rounded-circle shadow-sm me-3 border border-2 border-light" style="width: 60px; height: 60px; object-fit: cover;">
-                            <div class="text-start">
-                                <h6 class="fw-bold text-dark mb-0">Cik Anis Alia</h6>
-                                <p class="text-muted small mb-0">Ahli Jawatankuasa</p>
-                            </div>
-                        </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card card-profile-small">
+                        <img src="images/gambar-anis.jpg" alt="Cik Anis Alia" class="profile-img-sm" loading="lazy">
+                        <h6 class="fw-bold mt-2">Cik Anis Alia</h6>
+                        <p class="text-muted small">AJK</p>
                     </div>
                 </div>
             </div>
 
-            <!-- BAHAGIAN 2: JAWATANKUASA 1M1S -->
+            <!-- 1M1S Section -->
             <div class="mt-5 pt-5 border-top border-secondary border-opacity-25">
-                <div class="mb-5">
-                    <h3 class="fw-bold text-uppercase">Jawatankuasa 1 Murid 1 Sukan (1M1S) Memanah</h3>
-                    <hr class="mx-auto border-warning border-3 opacity-100" style="width: 60px;">
-                    <p class="text-muted">Menerajui inisiatif sukan memanah untuk penglibatan menyeluruh murid-murid.</p>
-                </div>
-
-                <div class="row justify-content-center g-4 mb-4">
-                    <!-- Pengerusi 1M1S -->
-                    <div class="col-lg-5 col-md-6">
-                        <div class="card h-100 shadow-sm border-0 bg-white rounded-4 p-4 text-center border-bottom border-dark border-4">
-                            <div class="d-flex flex-column align-items-center">
-                                <img src="images/gambar-huzaimi.jpeg" alt="Encik Huzaimi Bin Haji Shaari" class="img-fluid rounded-circle shadow-sm mb-3 border border-2 border-light" style="width: 110px; height: 110px; object-fit: cover;">
-                                <h5 class="fw-bold text-dark mb-1">Encik Huzaimi Bin Haji Shaari</h5>
-                                <p class="text-warning fw-bold small text-uppercase mb-0">Pengerusi</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                <h3 class="section-title">Jawatankuasa 1 Murid 1 Sukan (1M1S) Memanah</h3>
+                <p class="text-muted mb-4">Menerajui inisiatif sukan memanah untuk penglibatan menyeluruh murid-murid.</p>
                 <div class="row justify-content-center g-4">
-                    <!-- AJK 1: Harman -->
-                    <div class="col-lg-5 col-md-6">
-                        <div class="card shadow-sm border-0 bg-white rounded-4 p-3 text-center h-100">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <img src="images/gambar-harman.jpg" alt="En. Harman Bin Saluhi" class="img-fluid rounded-circle shadow-sm me-3 border border-2 border-light" style="width: 70px; height: 70px; object-fit: cover;">
-                                <div class="text-start">
-                                    <h6 class="fw-bold text-dark mb-0">Encik Harman Bin Saluhi</h6>
-                                    <p class="text-muted small mb-0">Ahli Jawatankuasa</p>
-                                </div>
-                            </div>
+                    <div class="col-md-6 col-lg-5">
+                        <div class="card card-profile">
+                            <img src="images/gambar-huzaimi.jpeg" alt="Encik Huzaimi Bin Haji Shaari" class="profile-img" loading="lazy">
+                            <h5 class="fw-bold mt-3">Encik Huzaimi Bin Haji Shaari</h5>
+                            <p class="text-gold fw-bold small text-uppercase">Pengerusi</p>
                         </div>
                     </div>
-
-                    <!-- AJK 2: Latifah -->
-                    <div class="col-lg-5 col-md-6">
-                        <div class="card shadow-sm border-0 bg-white rounded-4 p-3 text-center h-100">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <img src="images/gambar-latifah.jpg" alt="Pn. Latifah Rabaniah" class="img-fluid rounded-circle shadow-sm me-3 border border-2 border-light" style="width: 70px; height: 70px; object-fit: cover;">
-                                <div class="text-start">
-                                    <h6 class="fw-bold text-dark mb-0">Puan Latifah Rabaniah Binti Selamat</h6>
-                                    <p class="text-muted small mb-0">Ahli Jawatankuasa</p>
-                                </div>
-                            </div>
+                </div>
+                <div class="row justify-content-center g-4 mt-2">
+                    <div class="col-6 col-md-3">
+                        <div class="card card-profile-small">
+                            <img src="images/gambar-harman.jpg" alt="En. Harman" class="profile-img-sm" loading="lazy">
+                            <h6 class="fw-bold mt-2">En. Harman</h6>
+                            <p class="text-muted small">AJK</p>
                         </div>
                     </div>
-
-                    <!-- AJK 3: Siti Nurnadhirah -->
-                    <div class="col-lg-5 col-md-6">
-                        <div class="card shadow-sm border-0 bg-white rounded-4 p-3 text-center h-100">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <img src="images/gambar-siti.jpeg" alt="Cik Siti Nurnadhirah" class="img-fluid rounded-circle shadow-sm me-3 border border-2 border-light" style="width: 70px; height: 70px; object-fit: cover;">
-                                <div class="text-start">
-                                    <h6 class="fw-bold text-dark mb-0">Cik Siti Nurnadhirah Binti Zulkipeli</h6>
-                                    <p class="text-muted small mb-0">Ahli Jawatankuasa</p>
-                                </div>
-                            </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card card-profile-small">
+                            <img src="images/gambar-latifah.jpg" alt="Pn. Latifah" class="profile-img-sm" loading="lazy">
+                            <h6 class="fw-bold mt-2">Pn. Latifah</h6>
+                            <p class="text-muted small">AJK</p>
                         </div>
                     </div>
-
-                    <!-- AJK 4: Nor Aqilah -->
-                    <div class="col-lg-5 col-md-6">
-                        <div class="card shadow-sm border-0 bg-white rounded-4 p-3 text-center h-100">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <img src="images/gambar-aqilah.jpeg" alt="Cik Nor Aqilah" class="img-fluid rounded-circle shadow-sm me-3 border border-2 border-light" style="width: 70px; height: 70px; object-fit: cover;">
-                                <div class="text-start">
-                                    <h6 class="fw-bold text-dark mb-0">Cik Nor Aqilah Binti Mohd Shukri</h6>
-                                    <p class="text-muted small mb-0">Ahli Jawatankuasa</p>
-                                </div>
-                            </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card card-profile-small">
+                            <img src="images/gambar-siti.jpeg" alt="Cik Siti Nurnadhirah" class="profile-img-sm" loading="lazy">
+                            <h6 class="fw-bold mt-2">Cik Siti Nurnadhirah</h6>
+                            <p class="text-muted small">AJK</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card card-profile-small">
+                            <img src="images/gambar-aqilah.jpeg" alt="Cik Nor Aqilah" class="profile-img-sm" loading="lazy">
+                            <h6 class="fw-bold mt-2">Cik Nor Aqilah</h6>
+                            <p class="text-muted small">AJK</p>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- Tajaan -->
-    <section id="support" class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-uppercase">Tajaan & Pembangunan</h2>
-                <hr class="mx-auto border-warning border-3 opacity-100" style="width: 60px;">
-                <p class="text-muted mx-auto" style="max-width: 750px;">Setiap sumbangan yang disalurkan kepada Seikhlas Archery Club digunakan secara telus bagi menyokong keperluan teras atlet cilik dan pembangunan fasiliti kelab.</p>
-            </div>
+    <!-- ========== TAJAAN ========== -->
+    <section id="support">
+        <div class="container text-center">
+            <h2 class="section-title">Tajaan & Pembangunan</h2>
+            <p class="text-muted mx-auto mb-5" style="max-width: 750px;">Setiap sumbangan digunakan secara telus bagi menyokong keperluan teras atlet cilik dan pembangunan fasiliti kelab.</p>
 
             <div class="row g-4 mb-5 justify-content-center">
-                
-                <div class="col-xl-3 col-md-6">
-                    <div class="card h-100 shadow-sm border-0 border-top border-warning border-4 bg-white">
-                        <div class="card-body p-4 d-flex flex-column">
-                            <span class="fs-2 mb-3">🏹</span>
-                            <h6 class="fw-bold text-dark mb-2">Pembelian Peralatan</h6>
-                            <p class="small text-muted mb-0 flex-grow-1">Sumbangan digunakan untuk menyedia dan menyelenggara kelengkapan memanah yang lengkap termasuk <em>arrow, riser, limb, string, sight, target face, target butt,</em> dan <em>target stand</em>.</p>
-                        </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="card card-support">
+                        <span class="support-icon">🏹</span>
+                        <h6 class="fw-bold">Pembelian Peralatan</h6>
+                        <p class="small text-muted">Menyedia dan menyelenggara kelengkapan memanah yang lengkap termasuk arrow, riser, limb, string, sight, target face, target butt, dan target stand.</p>
                     </div>
                 </div>
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="card h-100 shadow-sm border-0 border-top border-success border-4 bg-white">
-                        <div class="card-body p-4 d-flex flex-column">
-                            <span class="fs-2 mb-3">🥇</span>
-                            <h6 class="fw-bold text-dark mb-2">Yuran Penyertaan</h6>
-                            <p class="small text-muted mb-0 flex-grow-1">Membiayai yuran pendaftaran bagi setiap siri kejohanan memanah yang disertai sepanjang tahun, bagi memastikan tiada atlet berbakat yang tercicir daripada peluang bertanding.</p>
-                        </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="card card-support">
+                        <span class="support-icon">🥇</span>
+                        <h6 class="fw-bold">Yuran Penyertaan</h6>
+                        <p class="small text-muted">Membiayai yuran pendaftaran kejohanan sepanjang tahun, memastikan tiada atlet berbakat tercicir.</p>
                     </div>
                 </div>
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="card h-100 shadow-sm border-0 border-top border-primary border-4 bg-white">
-                        <div class="card-body p-4 d-flex flex-column">
-                            <span class="fs-2 mb-3">🎯</span>
-                            <h6 class="fw-bold text-dark mb-2">Lapang Sasar (Range)</h6>
-                            <p class="small text-muted mb-0 flex-grow-1">Dana disalurkan untuk aktiviti <em>archery range improvement</em> bagi menaik taraf fasiliti, mengekalkan tahap keselamatan garisan memanah, serta memastikan persekitaran latihan kekal kondusif.</p>
-                        </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="card card-support">
+                        <span class="support-icon">🎯</span>
+                        <h6 class="fw-bold">Lapang Sasar (Range)</h6>
+                        <p class="small text-muted">Dana untuk archery range improvement, menaik taraf fasiliti, keselamatan garisan, persekitaran latihan kondusif.</p>
                     </div>
                 </div>
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="card h-100 shadow-sm border-0 border-top border-danger border-4 bg-white">
-                        <div class="card-body p-4 d-flex flex-column">
-                            <span class="fs-2 mb-3">📦</span>
-                            <h6 class="fw-bold text-dark mb-2">Stor Sukan Memanah</h6>
-                            <p class="small text-muted mb-0 flex-grow-1">Penyediaan, pengurusan, dan pengoptimuman ruang stor sukan khusus bagi memastikan semua aset dan peralatan memanah bernilai tinggi dapat disimpan dengan selamat dan teratur.</p>
-                        </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="card card-support">
+                        <span class="support-icon">📦</span>
+                        <h6 class="fw-bold">Stor Sukan Memanah</h6>
+                        <p class="small text-muted">Penyediaan, pengurusan, dan pengoptimuman stor sukan untuk aset dan peralatan bernilai tinggi.</p>
                     </div>
                 </div>
-
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-md-10">
-                    <div class="p-5 bg-dark text-white rounded-4 shadow-lg text-center border-bottom border-warning border-5">
-                        
-                        <div class="bg-light text-dark p-4 rounded-3 mb-5 shadow-sm mx-auto" style="max-width: 600px;">
+                    <div class="p-4 bg-dark text-white rounded-4 shadow-lg border-bottom border-gold border-5">
+                        <div class="bg-light text-dark p-3 rounded-3 mb-4 mx-auto" style="max-width: 600px;">
                             <p class="mb-1 fw-bold text-uppercase text-secondary small">Semua sumbangan rasmi disalurkan melalui:</p>
-                            <h4 class="fw-bold text-primary mb-2">Akaun PIBG SK Felda Lok Heng Selatan</h4>
-                            <p class="small text-muted mb-0">Sila hubungi Pengurus Pasukan kami untuk mendapatkan butiran akaun rasmi atau urusan dokumen sokongan tajaan korporat.</p>
+                            <h4 class="fw-bold text-primary mb-1">Akaun PIBG SK Felda Lok Heng Selatan</h4>
+                            <p class="small text-muted mb-0">Hubungi Pengurus Pasukan kami untuk butiran akaun atau dokumen sokongan tajaan korporat.</p>
                         </div>
 
-                        <hr class="border-secondary my-4 opacity-25">
-                        <h5 class="fw-bold text-white mb-4 text-uppercase tracking-wide">Setinggi-tinggi Penghargaan</h5>
+                        <hr class="border-secondary opacity-25">
+                        <h5 class="fw-bold text-white mb-4 text-uppercase">Setinggi-tinggi Penghargaan</h5>
                         
                         <div class="row g-4 justify-content-center text-start">
                             <div class="col-md-6">
                                 <div class="bg-white text-dark p-3 rounded-3 shadow-sm border-start border-success border-5 h-100 d-flex align-items-center">
                                     <span class="fs-1 me-3">🤝</span>
                                     <div>
-                                        <h6 class="fw-bold mb-1 text-success" style="line-height: 1.2;">YB Dato' Seri Haji Mohamed Khaled Nordin</h6>
+                                        <h6 class="fw-bold mb-1 text-success">YB Dato' Seri Haji Mohamed Khaled Nordin</h6>
                                         <p class="small text-muted mb-0">Menteri Pertahanan Malaysia merangkap Ahli Parlimen Kota Tinggi</p>
                                     </div>
                                 </div>
@@ -436,41 +367,38 @@
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Takwim -->
-    <section id="tournaments" class="py-5 bg-light">
+    <!-- ========== TAKWIM & PENCAPAIAN ========== -->
+    <section id="tournaments" class="bg-light">
         <div class="container text-center">
-            <h2 class="fw-bold text-uppercase mb-5">Takwim & Pencapaian 2026</h2>
-            <div class="row g-4 justify-content-center text-start">
-                
+            <h2 class="section-title">Takwim & Pencapaian 2026</h2>
+            <div class="row g-4 justify-content-center text-start mt-5">
                 <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 shadow-sm border-0 bg-white">
+                    <div class="card card-takwim">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center mb-2">
                                 <span class="badge bg-secondary">Selesai</span>
-                                <span class="badge bg-warning text-dark border border-warning">🥉 Gangsa</span>
+                                <span class="badge bg-gold text-dark">🥉 Gangsa</span>
                             </div>
                             <h5 class="fw-bold mb-1">Terbuka Kulai KATA2.0</h5>
                             <p class="text-muted small mb-3">📅 24 - 25 Jan 2026<br>📍 Kulai</p>
-                            <div class="p-2 bg-light rounded border-start border-warning border-3">
-                                <small class="text-muted">Pemenang Pingat Gangsa kategori <strong>Cilik Lelaki</strong>.</small>
+                            <div class="p-2 bg-light rounded border-start border-gold border-3">
+                                <small class="text-muted">Pemenang Pingat Gangsa <strong>Cilik Lelaki</strong>.</small>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 shadow border-0 border-start border-info border-5 bg-white">
+                    <div class="card card-takwim">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center mb-2">
                                 <span class="badge bg-secondary">Selesai</span>
-                                <span class="badge bg-info text-dark border border-info">📈 Top 30</span>
+                                <span class="badge bg-info text-dark">📈 Top 30</span>
                             </div>
                             <h5 class="fw-bold text-primary mb-1">MSSD Kota Tinggi</h5>
                             <p class="text-muted small mb-3">📅 28 - 29 Apr 2026<br>📍 Kota Tinggi</p>
@@ -483,17 +411,16 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 shadow border-0 border-start border-warning border-5 bg-white">
+                    <div class="card card-takwim">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center mb-2">
                                 <span class="badge bg-secondary">Selesai</span>
-                                <span class="badge bg-warning text-dark border border-warning">🥇 Emas</span>
+                                <span class="badge bg-gold text-dark">🥇 Emas</span>
                             </div>
-                            <h5 class="fw-bold text-dark mb-1">Selangor Juniors Open</h5>
+                            <h5 class="fw-bold">Selangor Juniors Open</h5>
                             <p class="text-muted small mb-3">📅 31 Mei - 2 Jun 2026<br>📍 SMAP Kajang</p>
-                            <div class="p-2 bg-light rounded border-start border-warning border-3">
+                            <div class="p-2 bg-light rounded border-start border-gold border-3">
                                 <small class="fw-bold d-block text-dark">Pencapaian Gemilang!</small>
                                 <ul class="list-unstyled mb-0 small text-muted lh-sm mt-1">
                                     <li class="mb-1"><strong class="text-dark">Emas:</strong> Barebow B12 (P)</li>
@@ -503,9 +430,8 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 shadow border-0 border-start border-primary border-5 bg-white">
+                    <div class="card card-takwim">
                         <div class="card-body">
                             <div class="mb-2">
                                 <span class="badge bg-primary text-white">Akan Datang</span>
@@ -519,28 +445,27 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Hubungi -->
-    <section id="contact" class="py-5">
+    <!-- ========== HUBUNGI ========== -->
+    <section id="contact">
         <div class="container text-center">
-            <h2 class="fw-bold mb-5">HUBUNGI KAMI</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-5 mb-3">
-                    <div class="p-4 border rounded bg-white shadow-sm h-100 text-center">
-                        <h6 class="fw-bold text-warning text-uppercase mb-3">Pengurus Pasukan</h6>
+            <h2 class="section-title">Hubungi Kami</h2>
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-5 mb-4">
+                    <div class="p-4 border rounded bg-white shadow-sm h-100">
+                        <h6 class="fw-bold text-gold text-uppercase mb-3">Pengurus Pasukan</h6>
                         <p class="fw-bold mb-1 text-dark">Cikgu Latifah</p>
                         <a href="https://wa.me/60127495699?text=Assalamualaikum%20Cikgu%20Latifah,%20saya%20ingin%20bertanya%20mengenai%20Kelab%20Memanah%20Seikhlas%20Archery." target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-sm mt-2 fw-bold">
                             💬 WhatsApp Seikhlas Archery
                         </a>
                     </div>
                 </div>
-                <div class="col-md-5 mb-3">
-                    <div class="p-4 border rounded bg-white shadow-sm h-100 text-center">
-                        <h6 class="fw-bold text-warning text-uppercase mb-3">Alamat Sekolah</h6>
+                <div class="col-md-5 mb-4">
+                    <div class="p-4 border rounded bg-white shadow-sm h-100">
+                        <h6 class="fw-bold text-gold text-uppercase mb-3">Alamat Sekolah</h6>
                         <p class="small text-muted mb-0">SK Felda Lok Heng Selatan,<br>81900 Kota Tinggi, Johor.</p>
                     </div>
                 </div>
@@ -548,17 +473,18 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ========== FOOTER ========== -->
     <footer class="bg-dark text-white pt-5 pb-3">
         <div class="container text-center">
-            <img src="images/logo-kelab.png" alt="Logo Seikhlas Archery" width="70" class="mb-3" style="object-fit: contain;">
-            <p class="fw-bold text-warning mb-2">SEIKHLAS ARCHERY CLUB</p>
+            <img src="images/logo-kelab.png" alt="Logo Seikhlas Archery" width="70" class="mb-3" loading="lazy">
+            <p class="fw-bold text-gold mb-2">SEIKHLAS ARCHERY CLUB</p>
             <p class="small text-secondary mb-0">SK Felda Lok Heng Selatan (JBA3052)</p>
             <hr class="border-secondary my-4">
             <p class="small text-secondary mb-0">&copy; 2026 Seikhlas Archery. Semua hak cipta terpelihara.</p>
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
