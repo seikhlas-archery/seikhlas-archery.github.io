@@ -161,39 +161,43 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-/* --- PROFILES --- */
+/* --- PROFILES (Saiz Dikecilkan) --- */
 .card-profile,
 .card-profile-highlight {
     text-align: center;
-    padding: 2rem 1.5rem;
+    padding: 1.8rem 1.2rem;
 }
+
 .profile-img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border-radius: 50%;
     margin: 0 auto;
-    border: 3px solid var(--kelabu-sejuk);
+    border: 2px solid var(--emas);
 }
+
 .profile-img-lg {
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
     object-fit: cover;
     border-radius: 50%;
     margin: 0 auto;
-    border: 3px solid var(--emas);
+    border: 2px solid var(--emas);
 }
+
 .profile-img-sm {
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
     object-fit: cover;
     border-radius: 50%;
     margin: 0 auto;
     border: 2px solid var(--kelabu-sejuk);
 }
+
 .card-profile-small {
     text-align: center;
-    padding: 1.5rem;
+    padding: 1.2rem;
 }
 
 /* --- SUPPORT CARDS --- */
