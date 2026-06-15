@@ -1,13 +1,15 @@
-/* ========== SEIKHLAS ARCHERY CUSTOM STYLES ========== */
+/* ========== SEIKHLAS ARCHERY – Google Chrome Inspired Styles ========== */
 
 /* --- DESIGN TOKENS --- */
 :root {
-    --hitam-lembut: #121212;
+    --hitam-lembut: #202124;       /* Warna gelap Google */
+    --kelabu-teks: #5F6368;        /* Teks sekunder */
+    --putih-hangat: #FFFFFF;
+    --kelabu-latar: #F8F9FA;       /* Latar belakang cerah */
     --emas: #C9A227;
     --emas-terang: #E0C068;
-    --putih-hangat: #F9F9F9;
-    --kelabu-sejuk: #EAEAEA;
-    --kelabu-teks: #4A4A4A;
+    --bayang-lembut: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+    --bayang-kad: 0 4px 12px rgba(0,0,0,0.05);
     --font-display: 'Bebas Neue', sans-serif;
 }
 
@@ -15,261 +17,271 @@
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    color: var(--kelabu-teks);
+    color: var(--hitam-lembut);
     background-color: var(--putih-hangat);
     scroll-behavior: smooth;
-    line-height: 1.7;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    letter-spacing: -0.3px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    color: var(--hitam-lembut);
 }
 
 /* --- UTILITY CLASSES --- */
 .text-gold {
     color: var(--emas) !important;
 }
-.bg-gold {
-    background-color: var(--emas) !important;
-}
-.border-gold {
-    border-color: var(--emas) !important;
-}
 .section-title {
-    position: relative;
-    display: inline-block;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 1.5rem;
+    font-weight: 500;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.5px;
+    color: var(--hitam-lembut);
 }
 .section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: var(--emas);
-    margin: 0.75rem auto 0;
+    display: none; /* Buang garis hiasan bawah – biar bersih */
+}
+.section-subtitle {
+    text-align: center;
+    color: var(--kelabu-teks);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 3rem;
 }
 
-/* --- NAVBAR --- */
+/* --- NAVBAR (ala Chrome – sangat bersih) --- */
 .navbar {
-    background: rgba(18, 18, 18, 0.85) !important;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(201, 162, 39, 0.15);
-    transition: background 0.3s ease;
-    padding: 0.6rem 1rem;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 0.5rem 1rem;
+    box-shadow: none;
 }
 .navbar-brand {
     font-family: var(--font-display);
-    font-size: 1.6rem;
-    letter-spacing: 2px;
-    color: var(--emas) !important;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: var(--hitam-lembut) !important;
 }
 .navbar-nav .nav-link {
-    font-weight: 500;
-    color: #ddd !important;
-    transition: color 0.3s;
-    margin: 0 0.3rem;
+    font-weight: 400;
+    color: var(--kelabu-teks) !important;
+    font-size: 0.95rem;
+    margin: 0 0.5rem;
+    transition: color 0.2s;
 }
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
+.navbar-nav .nav-link:hover {
     color: var(--emas) !important;
 }
 .navbar-toggler {
-    border-color: rgba(255,255,255,0.3);
+    border: none;
 }
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0,0.6)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* --- HERO SECTION --- */
+/* --- HERO SECTION (Minimal & Centered) --- */
 .hero-section {
-    background: linear-gradient(to right, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 100%), 
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%), 
                 url('../images/hero-team.webp') no-repeat center center/cover;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    position: relative;
-    padding: 0;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
 }
 .hero-content {
-    max-width: 650px;
-    padding: 2.5rem 2rem;
-    border-left: 5px solid var(--emas);
-    background: rgba(0,0,0,0.25);
-    backdrop-filter: blur(4px);
-    border-radius: 4px;
+    max-width: 720px;
+    padding: 0;
+    border-left: none;
+    background: none;
+    backdrop-filter: none;
+    border-radius: 0;
 }
 .hero-section h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-shadow: 0 4px 12px rgba(0,0,0,0.7);
+    font-size: 3.8rem;
+    font-weight: 600;
+    letter-spacing: 0px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.4);
     color: #fff !important;
-    line-height: 1.2;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
 }
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 300;
-    color: #F0F0F0 !important;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-    margin-bottom: 2rem;
+    color: rgba(255,255,255,0.9) !important;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    margin-bottom: 2.5rem;
 }
 .btn-hero {
     background: var(--emas);
     border: none;
     color: var(--hitam-lembut);
-    padding: 0.8rem 2.5rem;
-    letter-spacing: 2px;
-    font-weight: 700;
+    padding: 0.8rem 3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 50px; /* Bentuk pil */
+    box-shadow: 0 2px 8px rgba(201, 162, 39, 0.3);
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(201, 162, 39, 0.3);
-    border-radius: 4px;
+    font-size: 1rem;
 }
 .btn-hero:hover {
     background: var(--emas-terang);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(201, 162, 39, 0.5);
-    color: #000;
+    box-shadow: 0 4px 15px rgba(201, 162, 39, 0.5);
+    transform: translateY(-2px);
 }
 
-/* --- CARDS (GENERIC) --- */
+/* --- CARDS (Google-style – ringan & bernafas) --- */
 .card {
     border: none;
     background: #fff;
-    box-shadow: 0 12px 24px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.03);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 16px;
+    box-shadow: var(--bayang-lembut);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    border-radius: 20px;
     overflow: hidden;
 }
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 30px rgba(0,0,0,0.08) !important;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 /* --- KEPUTUSAN (Results) Cards --- */
 .card-result .medal-icon {
-    font-size: 3rem;
-    display: block;
+    font-size: 2.8rem;
     margin-bottom: 0.5rem;
 }
 .card-result {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     text-align: center;
+    border-radius: 24px;
+    background: #fff;
 }
 
-/* --- PROFILES (Saiz Dikecilkan) --- */
+/* --- PROFILES (lebih kecil & bersih) --- */
 .card-profile,
 .card-profile-highlight {
     text-align: center;
-    padding: 1.8rem 1.2rem;
+    padding: 1.5rem 1rem;
+    background: #fff;
+    border-radius: 24px;
 }
-
 .profile-img {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     object-fit: cover;
     border-radius: 50%;
     margin: 0 auto;
     border: 2px solid var(--emas);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
-
 .profile-img-lg {
-    width: 90px;
-    height: 90px;
+    width: 85px;
+    height: 85px;
     object-fit: cover;
     border-radius: 50%;
     margin: 0 auto;
     border: 2px solid var(--emas);
 }
-
 .profile-img-sm {
     width: 55px;
     height: 55px;
     object-fit: cover;
     border-radius: 50%;
     margin: 0 auto;
-    border: 2px solid var(--kelabu-sejuk);
+    border: 1px solid #e0e0e0;
 }
-
 .card-profile-small {
     text-align: center;
-    padding: 1.2rem;
+    padding: 1.5rem 1rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: var(--bayang-lembut);
 }
 
 /* --- SUPPORT CARDS --- */
 .card-support {
     text-align: center;
-    padding: 2rem 1.5rem;
-    border-top: 4px solid var(--emas);
+    padding: 2.5rem 1.5rem;
+    border-top: none;
+    border-radius: 24px;
+    background: #fff;
 }
 .support-icon {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     display: block;
     margin-bottom: 1rem;
 }
 
 /* --- TAKWIM CARDS --- */
 .card-takwim {
-    border-left: 5px solid var(--emas);
+    border-left: none;
+    border-radius: 20px;
+    background: #fff;
+}
+.card-takwim .badge {
+    font-weight: 500;
 }
 
-/* --- GALERI --- */
+/* --- GALERI (grid bersih) --- */
 .galeri-img {
     width: 100%;
-    height: 250px;
+    height: 280px;
     object-fit: cover;
-    border-radius: 12px;
-    transition: transform 0.4s ease, filter 0.4s ease;
+    border-radius: 16px;
+    transition: transform 0.3s ease, filter 0.3s ease;
     cursor: pointer;
+    box-shadow: var(--bayang-lembut);
 }
 .galeri-img:hover {
-    transform: scale(1.03);
-    filter: brightness(1.1);
+    transform: scale(1.02);
+    filter: brightness(1.05);
+}
+
+/* --- HUBUNGI (Contact) --- */
+#contact .card,
+#contact .border {
+    border-radius: 20px;
+    box-shadow: var(--bayang-lembut);
 }
 
 /* --- FOOTER --- */
 footer {
     background-color: var(--hitam-lembut) !important;
-}
-footer a:hover {
-    color: var(--emas) !important;
+    border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 /* --- RESPONSIVE ADJUSTMENTS --- */
-@media (max-width: 992px) {
-    .hero-section h1 {
-        font-size: 2.8rem;
-    }
-}
 @media (max-width: 768px) {
-    .hero-section {
-        min-height: 80vh;
-        background-position: center 20%;
-    }
     .hero-section h1 {
-        font-size: 2.2rem !important;
-    }
-    .hero-content {
-        padding: 1.5rem;
-        border-left: 4px solid var(--emas);
+        font-size: 2.5rem !important;
     }
     .hero-subtitle {
         font-size: 1.1rem;
     }
-    .section-title {
-        font-size: 1.8rem;
-    }
     .galeri-img {
-        height: 200px;
+        height: 220px;
+    }
+    .section-title {
+        font-size: 1.9rem;
     }
 }
 @media (max-width: 576px) {
-    .hero-content {
-        padding: 1rem;
-        background: rgba(0,0,0,0.4);
+    .hero-section {
+        min-height: 85vh;
+    }
+    .hero-section h1 {
+        font-size: 2rem !important;
+    }
+    .profile-img,
+    .profile-img-lg {
+        width: 65px;
+        height: 65px;
     }
 }
