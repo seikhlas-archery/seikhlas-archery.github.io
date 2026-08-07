@@ -1,75 +1,21 @@
 /* ==========================================================================
-   SEIKHLAS ARCHERY – Modern CSS Architecture v2.0
+   SEIKHLAS ARCHERY – Elite Academy Architecture (High-Impact Swiss)
    ========================================================================== */
 
-/* --- 1. DESIGN SYSTEM & CUSTOM PROPERTIES --- */
 :root {
-  /* Colors */
-  --color-bg: #F8F9FA;
-  --color-surface: #FFFFFF;
-  --color-text-primary: #1A1A1A;
-  --color-text-secondary: #333333;
-  --color-text-muted: #555555;
-  --color-text-light: #777777;
-  --color-text-inverse: #FFFFFF;
-  
-  /* Brand Colors - Accessible */
-  --color-primary: #1A73E8;
-  --color-primary-hover: #1557B0;
-  --color-primary-light: rgba(26, 115, 232, 0.1);
-  
-  --color-gold: #D4920B;
-  --color-gold-light: #F9AB00;
-  --color-gold-hover: #B87A08;
-  
-  --color-green: #1E8E3E;
-  --color-error: #D93025;
-  
-  /* Typography */
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-                 Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  --font-size-base: 1rem;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-bold: 700;
-  --font-weight-black: 800;
-  --line-height-base: 1.6;
-  
-  /* Spacing */
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-  --spacing-2xl: 4rem;
-  --spacing-3xl: 7rem;
-  
-  /* Border Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 24px;
-  --radius-xl: 28px;
-  --radius-full: 9999px;
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08);
-  
-  /* Transitions */
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-  /* Z-Index */
-  --z-sticky: 1030;
+  /* Brutalist Palette */
+  --black: #050505;
+  --white: #ffffff;
+  --gold: #D4AF37;
+  --border-width: 2px;
 }
 
-/* --- 2. RESET & BASE STYLES --- */
-*,
-*::before,
-*::after {
+/* --- BASE & RESETS --- */
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border-radius: 0 !important; /* Force ZERO border radius everywhere */
 }
 
 html {
@@ -77,589 +23,214 @@ html {
 }
 
 body {
-  font-family: var(--font-family);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-base);
-  color: var(--color-text-primary);
-  background-color: var(--color-bg);
+  font-family: 'Inter', sans-serif;
+  background-color: var(--white);
+  color: var(--black);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  line-height: 1.6;
 }
 
-/* --- 3. TYPOGRAPHY --- */
+/* --- TYPOGRAPHY --- */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-primary);
-  line-height: 1.2;
-  margin-bottom: var(--spacing-md);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 1rem;
 }
 
-h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
-h2 { font-size: clamp(2rem, 4.5vw, 3rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
-h4 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
-
-p {
-  color: var(--color-text-secondary);
-  margin-bottom: var(--spacing-md);
-  max-width: 70ch;
+h1 {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
 }
 
-.lead {
-  font-size: 1.25rem;
-  font-weight: var(--font-weight-regular);
-  line-height: 1.7;
-  color: var(--color-text-secondary);
+h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 
-.small, small {
-  color: var(--color-text-muted);
+p, .lead {
+  font-weight: 500;
+  color: #222;
 }
 
-.text-muted {
-  color: var(--color-text-muted) !important;
-}
-
-.text-dark {
-  color: var(--color-text-primary) !important;
-}
-
-/* --- 4. ACCESSIBILITY --- */
-:focus-visible {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 2px;
-  border-radius: 2px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* --- 5. UTILITY CLASSES --- */
-.section-padding {
-  padding: var(--spacing-3xl) 0;
-}
-
-@media (max-width: 768px) {
-  .section-padding {
-    padding: var(--spacing-2xl) 0;
-  }
-}
-
-/* White background sections */
-.bg-white-section {
-  background-color: var(--color-surface);
-}
-
-.bg-white-section h1,
-.bg-white-section h2,
-.bg-white-section h3,
-.bg-white-section h4,
-.bg-white-section h5,
-.bg-white-section h6 {
-  color: var(--color-text-primary);
-}
-
-.bg-white-section p,
-.bg-white-section .lead,
-.bg-white-section .small,
-.bg-white-section .text-muted {
-  color: var(--color-text-secondary);
-}
-
-.bg-white-section .card {
-  background-color: var(--color-surface);
-}
-
-/* --- 6. COMPONENTS: CARDS --- */
-.card {
-  background: var(--color-surface);
-  border-radius: var(--radius-xl);
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  padding: var(--spacing-xl);
-  transition: var(--transition-base);
-  box-shadow: var(--shadow-sm);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(0, 0, 0, 0.08);
-}
-
-.card p,
-.card .lead,
-.card .small,
-.card .text-muted {
-  color: var(--color-text-secondary);
-}
-
-.card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
-  color: var(--color-text-primary);
-}
-
-/* --- 7. COMPONENTS: PILLS --- */
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  padding: 0.5rem 1.25rem;
-  border-radius: var(--radius-full);
-  font-size: 0.875rem;
-  font-weight: var(--font-weight-medium);
-  background: var(--color-primary-light);
-  color: var(--color-primary);
-  border: 1px solid transparent;
-  transition: var(--transition-fast);
-}
-
-.pill.gold {
-  background: rgba(212, 146, 11, 0.1);
-  color: var(--color-gold);
-}
-
-.pill.secondary {
-  background: rgba(95, 99, 104, 0.1);
-  color: var(--color-text-muted);
-}
-
-/* --- 8. COMPONENTS: BUTTONS --- */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-sm);
-  padding: 0.75rem 2rem;
-  font-weight: var(--font-weight-medium);
-  font-size: 1rem;
-  border-radius: var(--radius-md);
-  border: none;
-  transition: var(--transition-base);
-  cursor: pointer;
-  text-decoration: none;
-  min-height: 48px;
-  min-width: 48px;
-}
-
-.btn-primary {
-  background: var(--color-primary);
-  color: var(--color-text-inverse);
-}
-
-.btn-primary:hover {
-  background: var(--color-primary-hover);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
-  color: var(--color-text-inverse);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--color-primary);
-  border: 1px solid #DADCE0;
-}
-
-.btn-secondary:hover {
-  background: var(--color-bg);
-  border-color: var(--color-primary);
-}
-
-.btn-gold {
-  background: var(--color-gold);
-  color: var(--color-text-inverse);
-}
-
-.btn-gold:hover {
-  background: var(--color-gold-hover);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
-  color: var(--color-text-inverse);
-}
-
-/* --- 9. COMPONENTS: NAVIGATION --- */
+/* --- NAVIGATION --- */
 .navbar {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 0.6rem 1rem;
-  position: sticky;
-  top: 0;
-  z-index: var(--z-sticky);
-}
-
-@supports not (backdrop-filter: blur(1px)) {
-  .navbar {
-    background: rgba(255, 255, 255, 0.98);
-  }
+  border-bottom: var(--border-width) solid var(--black);
+  background: var(--white);
+  padding: 1rem 0;
 }
 
 .navbar-brand {
-  font-weight: var(--font-weight-black);
-  font-size: 1.4rem;
-  color: var(--color-text-primary) !important;
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-size: 1.5rem;
 }
 
 .nav-link {
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-muted) !important;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-full);
-  transition: var(--transition-fast);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--black) !important;
+  transition: 0.2s;
 }
 
 .nav-link:hover {
-  background: rgba(0, 0, 0, 0.04);
-  color: var(--color-text-primary) !important;
+  background: var(--black);
+  color: var(--white) !important;
 }
 
-.nav-link.active {
-  color: var(--color-primary) !important;
+/* --- LAYOUT & SECTIONS --- */
+.section-brutal {
+  border-bottom: var(--border-width) solid var(--black);
+  padding: 6rem 0;
 }
 
-/* --- 10. COMPONENTS: HERO --- */
 .hero {
-  min-height: 90vh;
-  display: flex;
+  background: var(--black);
+  color: var(--white);
+  padding: 8rem 0;
+  border-bottom: var(--border-width) solid var(--black);
+}
+
+.hero h1, .hero p {
+  color: var(--white);
+}
+
+/* --- COMPONENTS: BUTTONS --- */
+.btn-brutal {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: var(--spacing-2xl) var(--spacing-lg);
-  position: relative;
-  isolation: isolate;
+  background: var(--gold);
+  color: var(--black);
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border: var(--border-width) solid var(--black);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
-    url('../images/hero-team.webp') no-repeat center center/cover;
-  z-index: -1;
+.btn-brutal:hover {
+  background: var(--white);
+  color: var(--black);
+  box-shadow: 6px 6px 0px var(--black);
+  transform: translate(-2px, -2px);
 }
 
-.hero-content {
-  max-width: 720px;
-  width: 100%;
+.btn-brutal.dark {
+  background: var(--black);
+  color: var(--white);
 }
 
-.hero h1 {
-  color: var(--color-text-inverse);
-  font-weight: var(--font-weight-black);
-  margin-bottom: var(--spacing-lg);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+.btn-brutal.dark:hover {
+  background: var(--white);
+  color: var(--black);
 }
 
-.hero-subtitle {
-  font-size: 1.35rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: var(--spacing-xl);
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+/* --- COMPONENTS: CARDS --- */
+.card-brutal {
+  border: var(--border-width) solid var(--black);
+  background: var(--white);
+  padding: 2.5rem;
+  height: 100%;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    min-height: 60vh;
-    padding: var(--spacing-xl) var(--spacing-md);
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
+.card-brutal:hover {
+  transform: translate(-6px, -6px);
+  box-shadow: 10px 10px 0px var(--black);
 }
 
-/* --- 11. COMPONENTS: GALLERY --- */
+/* --- COMPONENTS: PILLS / LABELS --- */
+.label-brutal {
+  display: inline-block;
+  border: var(--border-width) solid var(--black);
+  padding: 0.4rem 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  background: var(--gold);
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.label-brutal.inverse {
+  background: var(--black);
+  color: var(--white);
+}
+
+.label-brutal.outline {
+  background: transparent;
+}
+
+/* --- COMPONENTS: AVATARS & PROFILES --- */
+.profile-square {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: var(--border-width) solid var(--black);
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.profile-square.small {
+  width: 80px;
+  height: 80px;
+}
+
+.card-brutal:hover .profile-square {
+  filter: grayscale(0%);
+}
+
+/* --- COMPONENTS: GALLERY --- */
 .gallery-grid {
   display: grid;
-  gap: var(--spacing-md);
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
 .gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-md);
+  border: var(--border-width) solid var(--black);
   aspect-ratio: 4/3;
+  overflow: hidden;
+  position: relative;
+  background: var(--black);
 }
 
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition-base);
-  display: block;
+  filter: grayscale(100%) contrast(1.2);
+  transition: all 0.4s ease;
 }
 
 .gallery-item:hover img {
+  filter: grayscale(0%) contrast(1);
   transform: scale(1.05);
 }
 
-.gallery-item.wide {
-  grid-column: span 2;
-}
-
-@media (max-width: 768px) {
-  .gallery-item.wide {
-    grid-column: span 1;
-  }
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-sm);
-  }
-}
-
-@media (max-width: 576px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* --- 12. COMPONENTS: PROFILES --- */
-.profile-image {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(0, 0, 0, 0.05);
-  flex-shrink: 0;
-}
-
-.profile-image.small {
-  width: 56px;
-  height: 56px;
-}
-
-.profile-image.large {
-  width: 96px;
-  height: 96px;
-}
-
-/* --- 13. COMPONENTS: MEDALS --- */
-.medal {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  margin-bottom: var(--spacing-sm);
+/* --- MEDALS & ICONS --- */
+.medal-icon {
+  font-size: 3.5rem;
   line-height: 1;
+  margin-bottom: 1rem;
 }
 
-/* --- 14. COMPONENTS: RESULT CARDS --- */
-.result-card .medal {
-  font-size: 3rem;
-  margin-bottom: 0.75rem;
+/* --- FOOTER --- */
+footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 4rem 0;
 }
 
-.result-card h2 {
-  color: var(--color-text-primary);
-}
-
-.result-card p {
-  color: var(--color-text-secondary);
-}
-
-/* --- 15. COMPONENTS: SUPPORT CARDS --- */
-.support-card .medal {
-  font-size: 2.5rem;
-}
-
-.support-card h6 {
-  color: var(--color-text-primary);
-}
-
-.support-card p {
-  color: var(--color-text-secondary);
-}
-
-/* --- 16. COMPONENTS: TOURNAMENT CARDS --- */
-.tournament-card .pill {
-  margin-bottom: var(--spacing-md);
-}
-
-.tournament-card h6 {
-  color: var(--color-text-primary);
-}
-
-.tournament-card .text-muted {
-  color: var(--color-text-muted);
-}
-
-.tournament-card .text-dark {
-  color: var(--color-text-primary);
-}
-
-/* --- 17. COMPONENTS: FOOTER --- */
-.footer {
-  background: var(--color-bg);
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  padding: var(--spacing-xl) 0;
-  margin-top: auto;
-}
-
-.footer h6 {
-  color: var(--color-text-primary);
-}
-
-.footer p,
-.footer .small {
-  color: var(--color-text-muted);
-}
-
-.footer .text-muted {
-  color: var(--color-text-light);
-}
-
-.footer-logo {
-  filter: grayscale(1);
-  opacity: 0.75;
-  transition: var(--transition-base);
-}
-
-.footer-logo:hover {
-  filter: grayscale(0);
-  opacity: 1;
-}
-
-/* --- 18. RESPONSIVE --- */
-@media (max-width: 768px) {
-  .card {
-    padding: var(--spacing-lg);
-  }
-  
-  .profile-image.large {
-    width: 72px;
-    height: 72px;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-/* --- 19. PRINT --- */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-  
-  body {
-    background: white;
-    color: black;
-  }
-  
-  .card {
-    border: 1px solid #ddd !important;
-    box-shadow: none !important;
-    break-inside: avoid;
-  }
-  
-  .hero {
-    min-height: auto !important;
-    padding: 2rem 0 !important;
-  }
-  
-  .hero::before {
-    background: white !important;
-  }
-  
-  .hero h1 {
-    color: black !important;
-    text-shadow: none !important;
-  }
-  
-  .hero-subtitle {
-    color: #333 !important;
-    text-shadow: none !important;
-  }
-}
-
-/* --- 20. DARK MODE (future-ready) --- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #1A1A1A;
-    --color-surface: #2D2D2D;
-    --color-text-primary: #F5F5F5;
-    --color-text-secondary: #D0D0D0;
-    --color-text-muted: #B0B0B0;
-    --color-text-light: #909090;
-    --color-primary: #4A8FE8;
-    --color-primary-hover: #6BA8F0;
-    --color-primary-light: rgba(74, 143, 232, 0.2);
-  }
-  
-  .card {
-    border-color: rgba(255, 255, 255, 0.06);
-  }
-  
-  .card:hover {
-    border-color: rgba(255, 255, 255, 0.12);
-  }
-  
-  .navbar {
-    background: rgba(26, 26, 26, 0.92);
-    border-bottom-color: rgba(255, 255, 255, 0.06);
-  }
-  
-  @supports not (backdrop-filter: blur(1px)) {
-    .navbar {
-      background: rgba(26, 26, 26, 0.98);
-    }
-  }
-  
-  .nav-link:hover {
-    background: rgba(255, 255, 255, 0.06);
-  }
-  
-  .pill.secondary {
-    background: rgba(255, 255, 255, 0.06);
-    color: var(--color-text-muted);
-  }
-  
-  .bg-white-section {
-    background-color: var(--color-surface);
-  }
-  
-  .bg-white-section p,
-  .bg-white-section .lead,
-  .bg-white-section .small,
-  .bg-white-section .text-muted {
-    color: var(--color-text-secondary);
-  }
-  
-  .bg-white-section h1,
-  .bg-white-section h2,
-  .bg-white-section h3,
-  .bg-white-section h4,
-  .bg-white-section h5,
-  .bg-white-section h6 {
-    color: var(--color-text-primary);
-  }
+footer p {
+  color: var(--white);
 }
