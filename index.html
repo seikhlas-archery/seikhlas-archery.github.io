@@ -646,4 +646,138 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <article class="card" style="border-top: 3px solid var(--color-gold);">
-                            <span class="pill gold mb
+                            <span class="pill gold mb-3">Selesai</span>
+                            <h6 class="fw-bold">Selangor Juniors Open</h6>
+                            <p class="small text-muted mb-2">
+                                <time datetime="2026-05-31">31 Mei - 2 Jun 2026</time>
+                            </p>
+                            <p class="small fw-bold text-dark mb-0">🥇 Emas: Barebow B12 (P)</p>
+                            <p class="small fw-bold text-dark">🏹 Suku Akhir: Barebow B12 (L)</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <article class="card">
+                            <span class="pill" style="background: rgba(26,115,232,0.1); color: var(--color-primary);">Akan Datang</span>
+                            <h6 class="fw-bold">Selangor Int. Indoor</h6>
+                            <p class="small text-muted mb-2">
+                                <time datetime="2026-12-11">11 - 13 Dis 2026</time>
+                            </p>
+                            <p class="small fw-bold text-dark">MAEPS Serdang</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+        CONTACT SECTION
+        ============================================================ -->
+        <section id="contact" class="section-padding" aria-labelledby="contact-title">
+            <div class="container text-center">
+                <h2 id="contact-title">Hubungi Kami</h2>
+                
+                <div class="row justify-content-center g-4">
+                    <div class="col-md-5">
+                        <div class="card">
+                            <p class="text-uppercase small fw-bold text-muted mb-2">Pengurus Pasukan</p>
+                            <h5 class="fw-bold mb-3">Cikgu Latifah</h5>
+                            <a href="https://wa.me/60127495699?text=Saya%20berminat%20untuk%20menyokong%20Seikhlas%20Archery" 
+                               target="_blank" rel="noopener noreferrer" 
+                               class="btn btn-secondary px-4 rounded-pill">
+                                <span aria-hidden="true">💬</span>
+                                WhatsApp Kami
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card d-flex flex-column justify-content-center">
+                            <p class="text-uppercase small fw-bold text-muted mb-2">Alamat Latihan</p>
+                            <address class="mb-0" style="font-style: normal;">
+                                SK Felda Lok Heng Selatan,<br>
+                                81900 Kota Tinggi, Johor.
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer class="footer" role="contentinfo">
+        <div class="container text-center">
+            <img src="images/logo-kelab.png" alt="Logo Seikhlas Archery" width="48" height="48" class="footer-logo mb-3" loading="lazy" decoding="async">
+            <h6 class="fw-bold mb-1" style="color: var(--color-text-primary);">Seikhlas Archery Club</h6>
+            <p class="small mb-4">SK Felda Lok Heng Selatan (JBA3052)</p>
+            
+            <nav aria-label="Footer navigation" class="mb-3">
+                <ul class="list-unstyled d-flex justify-content-center gap-3 flex-wrap small">
+                    <li><a href="#home" class="text-decoration-none">Utama</a></li>
+                    <li><a href="#about" class="text-decoration-none">Mengenai</a></li>
+                    <li><a href="#support" class="text-decoration-none">Tajaan</a></li>
+                    <li><a href="#contact" class="text-decoration-none">Hubungi</a></li>
+                </ul>
+            </nav>
+            
+            <p class="small mb-0" style="font-size: 0.8rem; color: var(--color-text-secondary);">
+                &copy; <time datetime="2026">2026</time> Seikhlas Archery. Semua hak cipta terpelihara.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+    SCRIPTS (Deferred)
+    ============================================================ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+            defer 
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous">
+    </script>
+    
+    <!-- ============================================================
+    PROGRESSIVE ENHANCEMENT
+    ============================================================ -->
+    <script>
+        // Smooth scroll for anchor links (fallback for browsers without CSS scroll-behavior)
+        (function() {
+            if ('scrollBehavior' in document.documentElement.style) return;
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        })();
+
+        // Active navigation link tracking
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section[id], header[id]');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            link.removeAttribute('aria-current');
+                            if (link.getAttribute('href') === '#' + entry.target.id) {
+                                link.classList.add('active');
+                                link.setAttribute('aria-current', 'page');
+                            }
+                        });
+                    }
+                });
+            }, { threshold: 0.4 });
+            
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+</body>
+</html>
